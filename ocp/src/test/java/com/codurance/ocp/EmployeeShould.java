@@ -8,19 +8,27 @@ class EmployeeShould {
 
     private static final int BONUS = 100;
     private static final int SALARY = 1000;
+    private static final int EXTRA = 500;
 
     @Test
     public void not_add_bonus_to_the_engineer_pay_amount() {
-        Employee employee = new Employee(SALARY, BONUS, EmployeeType.ENGINEER);
-        assertThat(employee.payAmount())
+        Employee engineer = new Engineer(SALARY, BONUS);
+        assertThat(engineer.payAmount())
                 .isEqualTo(SALARY);
     }
 
 
     @Test
     public void add_bonus_to_the_manager_pay_amount() {
-        Employee employee = new Employee(SALARY, BONUS, EmployeeType.MANAGER);
-        assertThat(employee.payAmount())
+        Employee manager = new Manager(SALARY, BONUS);
+        assertThat(manager.payAmount())
                 .isEqualTo(SALARY+BONUS);
+    }
+
+    @Test
+    public void add_extra_bonus_to_ceo_pay_amount(){
+        Employee ceo = new CEO(SALARY, BONUS, EXTRA);
+        assertThat(ceo.payAmount())
+                .isEqualTo(SALARY+BONUS+EXTRA);
     }
 }
