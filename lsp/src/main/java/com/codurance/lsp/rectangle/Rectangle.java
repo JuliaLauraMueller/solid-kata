@@ -14,7 +14,7 @@ class Rectangle {
     }
 
     public void setWidth(int width) {
-        assert width > -1;
+        assert width > 0;
         this.width = width;
     }
 
