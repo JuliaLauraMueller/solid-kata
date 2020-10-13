@@ -5,7 +5,7 @@ public class PetrolCar extends Vehicle {
   private int fuelTankLevel = 0;
 
   @Override
-  public void fill() {
+  public void fillUp() {
     this.fuelTankLevel = FUEL_TANK_FULL;
   }
 

@@ -6,7 +6,7 @@ public class ElectricCar extends Vehicle {
     private int batteryLevel;
 
     @Override
-    public void fill() {
+    public void fillUp() {
         batteryLevel = BATTERY_FULL;
     }
 
