@@ -5,7 +5,14 @@ import java.util.Random;
 
 public class RandomQuoteService {
 
-    private final FileQuoteList quote = new FileQuoteList();
+    // So kann man keine andere Implementierung machen, stark von FileQuoteList anhängig
+    // private final FileQuoteList quote = new FileQuoteList();
+
+    private final IQuoteList quote;
+
+    public RandomQuoteService(IQuoteList quote) {
+        this.quote = quote;
+    }
 
     public String getRandomQuote() {
         List<String> quoteList = quote.getQuoteList();
