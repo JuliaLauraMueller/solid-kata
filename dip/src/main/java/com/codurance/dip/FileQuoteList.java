@@ -9,10 +9,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class FileQuoteList {
+public class FileQuoteList implements IQuoteList {
 
-    final String fileName = "/files/quote.txt";
-    final File file = getFileFromResource(fileName);
+    final String fileName   = "/files/quote.txt";
+    final File file         = getFileFromResource(fileName);
+
 
     public List<String> getQuoteList() {
         try (FileReader reader = new FileReader(file);
