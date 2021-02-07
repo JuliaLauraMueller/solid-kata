@@ -8,9 +8,9 @@ import java.io.PrintStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class BirdShould {
+class SpecificBirdShould {
     private ByteArrayOutputStream consoleContent = new ByteArrayOutputStream();
-    private final Bird bird = new Bird();
+    private final SpecificBird bird = new SpecificBird();
 
     @BeforeEach
     public void setUp() {

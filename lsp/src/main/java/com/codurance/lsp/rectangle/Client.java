@@ -6,6 +6,7 @@ public class Client {
         rec.setWidth(5);
         rec.setHeight(4);
         assert (rec.area() == 20);
+        System.out.println(rec.area() == 20);
     }
 
     public static void main(String[] args) {
